@@ -1,0 +1,11 @@
+# runtime data
+/data/
+
+# local config
+config/config.json
+
+# misc
+*.log
+.DS_Store
+新建 文本文档.js
+*.code-workspace

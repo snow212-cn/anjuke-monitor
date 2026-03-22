@@ -1,0 +1,63 @@
+{
+  "stateDir": "./data",
+  "request": {
+    "baseUrl": "https://anjuke.com",
+    "timeoutMs": 20000,
+    "retries": 2,
+    "retryDelayMs": 800,
+    "headers": {
+      "accept": "application/json, text/plain, */*, application/x-json, */*;q=0.01",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "cookie": "aQQ_ajkguid=6A2F35D1-E8BE-4409-850E-DFA48672CB43; sessid=9331C353-4514-4133-ACBF-8F20ACBE5BB0; ajk-appVersion=; ctid=182; id58=CkwA6mm0tiyhkl9VO+/NAg==; xxzlclientid=1adddb50-7cd7-4a87-b9c8-1773450801681; xxzlxxid=pfmxLtWSq1ICnBtQOvA3HSrYmuhYlbJyY9yn/C68r99MYZWiDIBCuiajJHKQShn1ROxn; xxzlbbid=pfmbRNmlvRsc5s+Ae95rD/NCeuktFD5l220N9suJJbZpz+URx6Ii3JSEWYqyR/Xupz7NGA0WfrULKXHu9sI0eC2hcSC86kjhs78BpNIoEGoEmQG5qlXsCV89kvF0AXuTOOGx0d9kI1IxNzczNDUwODAyNjIwMjY3_1"
+    }
+  },
+  "diff": {
+    "enableUpdated": false,
+    "updatedFields": ["price", "avg_price", "area_num", "room_num", "hall_num", "toilet_num", "floor_level", "orient", "fitment_name", "title"],
+    "maxItemsInNotification": 50
+  },
+  "dedupe": {
+    "enabled": true,
+    "priceToleranceWan": 1,
+    "photoField": "default_photo",
+    "featureFields": [
+      "community_id",
+      "area_num",
+      "room_num",
+      "hall_num",
+      "toilet_num",
+      "floor_level_bucket",
+      "total_floor"
+    ]
+  },
+  "report": {
+      "enabled": true,
+      "saveListings": true,
+      "saveDiff": true,
+      "listingsFormat": "csv",
+      "diffFormat": "md",
+      "saveDiffHistory": false,
+      "cleanupLegacy": true
+  },
+  "targets": [
+    {
+      "name": "东兴小区",
+      "mode": "community",
+      "cityId": 182,
+      "commId": 696590,
+      "entry": 51,
+      "pageSize": 20
+    },
+    {
+      "name": "东安区地图视野",
+      "mode": "viewport",
+      "cityId": 182,
+      "entry": 51,
+      "pageSize": 20,
+      "minLat": 44.58613281947374,
+      "minLng": 129.6289898311677,
+      "maxLat": 44.588663722641705,
+      "maxLng": 129.6463585675282
+    }
+  ]
+}
