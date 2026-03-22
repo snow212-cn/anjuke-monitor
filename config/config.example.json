@@ -27,7 +27,8 @@
       "hall_num",
       "toilet_num",
       "floor_level_bucket",
-      "total_floor"
+      "total_floor",
+      "orient"
     ]
   },
   "report": {
